@@ -144,11 +144,11 @@ int main(int argc, char **argv)
 
     sprintf(inFile, argv[1]);
     sprintf(outFile, argv[2]);
-    if (argc > 4) {
+    if (argc >= 4) {
         loopTimes = atoi(argv[3]);
     }
 
-    if (argc > 5) {
+    if (argc >= 5) {
         isOutput = atoi(argv[4]);
     }
 
