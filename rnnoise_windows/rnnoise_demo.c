@@ -103,7 +103,7 @@ int rnnoise_demo(const char* inFile, const char* outFile, uint16_t loopNum, uint
         for (size_t n = 0; n < totalFrameCnt / 480; n++) {
             get_frame_f32(pWavIn, frameIn, 480);
             rnnoise_process(pRnnoise, frameOut, frameIn);
-            if (isOutput) {
+            if (isOutput && j == nProcessCnt - 1) {
                 write_frames_f32(pWavOut, 480, frameOut);
             }
         }
