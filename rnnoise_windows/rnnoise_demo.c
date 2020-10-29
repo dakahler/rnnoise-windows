@@ -128,14 +128,6 @@ int main(int argc, char **argv)
     uint16_t loopTimes = 1;
     uint16_t isOutput = 1;
 
-#ifdef _WIN32
-    // Windows platform
-    sprintf(inFile, "../resources/audio_in_with_noise_48k.wav");
-    sprintf(outFile, "../resources/audio_in_with_noise_ns.wav");
-    rnnoise_demo(inFile, outFile, loopTimes, isOutput);
-    return 0;
-#endif // _WIN32
-
     // Linux platform
     if (argc == 1) {
         printf("Usage: %s <inFile> <outFile> <loopTimes, opt.> <isOutput, opt.>\n", argv[0]);
